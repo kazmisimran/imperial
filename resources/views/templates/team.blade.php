@@ -12,6 +12,8 @@ Team Section
     </div>
 
     <div class="row">
+      @foreach($teams as $team)
+
       <div class="col-md-3">
         <div class="member">
           <div class="pic"><img src="{{asset('storage/'.$team->img_path)}}" alt=""></div>
@@ -25,48 +27,8 @@ Team Section
           </div>
         </div>
       </div>
+      @endforeach
 
-      <div class="col-md-3">
-        <div class="member">
-          <div class="pic"><img src="img/team-2.jpg" alt=""></div>
-          <h4>Sarah Jhinson</h4>
-          <span>Product Manager</span>
-          <div class="social">
-          <a href=""><i class="fab fa-twitter"></i></a>
-              <a href=""><i class="fab fa-facebook-f"></i></a>
-              <a href=""><i class="fab fa-google-plus-g"></i></a>
-              <a href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="member">
-          <div class="pic"><img src="img/team-3.jpg" alt=""></div>
-          <h4>William Anderson</h4>
-          <span>CTO</span>
-          <div class="social">
-          <a href=""><i class="fab fa-twitter"></i></a>
-              <a href=""><i class="fab fa-facebook-f"></i></a>
-              <a href=""><i class="fab fa-google-plus-g"></i></a>
-              <a href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="member">
-          <div class="pic"><img src="img/team-4.jpg" alt=""></div>
-          <h4>Amanda Jepson</h4>
-          <span>Accountant</span>
-          <div class="social">
-          <a href=""><i class="fab fa-twitter"></i></a>
-              <a href=""><i class="fab fa-facebook-f"></i></a>
-              <a href=""><i class="fab fa-google-plus-g"></i></a>
-              <a href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>

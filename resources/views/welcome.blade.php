@@ -10,6 +10,8 @@
 
   @include('templates.services')
 
+  @include('templates.subscribe')
+
   @include('templates.portfolio')
 
   @include('templates.testimonials')
