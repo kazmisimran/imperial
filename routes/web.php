@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Header;
 use App\About;
 use App\Portfolio;
+use App\Team;
 
 
 /*
@@ -21,8 +22,9 @@ Route::get('/', function () {
     $header = Header::find(1);
     $about = About::find(1);
     $portfolios = Portfolio::all();
+    $teams = Team::all();
 
-    return view('welcome' , compact('header','about','portfolios'));
+    return view('welcome' , compact('header','about','portfolios','teams'));
 });
 
 Route::get('/admin', function(){return view ('admin.index');})->name('admin.index');

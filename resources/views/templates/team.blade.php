@@ -14,9 +14,9 @@ Team Section
     <div class="row">
       <div class="col-md-3">
         <div class="member">
-          <div class="pic"><img src="img/team-1.jpg" alt=""></div>
-          <h4>Walter White</h4>
-          <span>Chief Executive Officer</span>
+          <div class="pic"><img src="{{asset('storage/'.$team->img_path)}}" alt=""></div>
+        <h4>{{$team->name}}</h4>
+        <span>{{$team->position}}</span>
           <div class="social">
           <a href=""><i class="fab fa-twitter"></i></a>
               <a href=""><i class="fab fa-facebook-f"></i></a>
