@@ -9,4 +9,9 @@
     <a href="{{route('about')}}" class="d-block">Dashboard About</a>
     <a href="{{route('portfolio.index')}}" class="d-block">Dashboard Portfolio</a>
     <a href="{{route('team.index')}}" class="d-block">Dashboard Team</a>
+    <a href="{{route('service.index')}}">Dashboard Services</a>
+    <a href="{{route('subscriber.index')}}" class='d-block'>Dashboard Subscribe</a>
+    <a href="{{route('testimonial.index')}}">Dashboard Testimonial</a>
+    <a href="{{route('contact.index')}}" class="d-block">Dashboard Contact</a>
+
 </div>

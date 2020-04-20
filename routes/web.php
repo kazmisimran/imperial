@@ -5,8 +5,9 @@ use App\Header;
 use App\About;
 use App\Portfolio;
 use App\Team;
-
-
+use App\Service;
+use App\Subscriber;
+use App\Testimonial;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +25,12 @@ Route::get('/', function () {
     $portfolios = Portfolio::all();
     $teams = Team::all();
 
-    return view('welcome' , compact('header','about','portfolios','teams'));
+    $services=Service::all();
+    $subscriber=Subscriber::find(1);
+    $testimonials=Testimonial::all();
+
+
+    return view('welcome' , compact('header','about','portfolios','teams','services','subscriber','testimonials'));
 });
 
 Route::get('/admin', function(){return view ('admin.index');})->name('admin.index');
@@ -51,6 +57,27 @@ Route::resource('admin/portfolio' , 'PortfolioController');
 //Section Team
 
 Route::resource('admin/team' , 'TeamController');
+
+// // Brahiam 
+
+//Section Service
+
+Route::resource('admin/service' , 'ServiceController');
+
+//Section Subscriber
+
+Route::resource('admin/subscriber' , 'SubscriberController');
+Route::post('admin/subscriber/create', "SubscriberController@create")->name('subscriber.create');
+Route::post('admin/subscriber/update', "SubscriberController@update")->name('subscriber.update');
+
+//Section Testimonial
+
+Route::resource('testimonial','TestimonialController');
+
+//Section Contact 
+
+Route::resource('contact' , 'ContactController');
+Route::post('admin/contact/store', 'ContactController@store')->name('contact.store');
 
 
 
